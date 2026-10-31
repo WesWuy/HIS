@@ -134,6 +134,17 @@ export default {
   </div>
 </section>
 
+<section class="section section--tight">
+  <div class="wrap split" data-reveal>
+    <div>
+      ${ui.eyebrow("Not ready for the cohort?")}
+      <h2>Start with DIY OS.</h2>
+      <p class="muted">The same four systems as a printable self-install manual, for $47 USD. Build on your own schedule, and if you join a cohort later, the price is credited toward it.</p>
+    </div>
+    <div><a class="btn btn--outline" href="/diy-os" data-track-event="diy_os_cta_click">Explore DIY OS</a></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap" style="max-width:860px">
     <div class="section-head" data-reveal>

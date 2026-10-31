@@ -234,6 +234,20 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
 /* Media */
 .frame { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--carbon); }
 
+/* DIY OS: product cover, page previews, comparison table */
+.cover { max-width: 400px; width: 100%; margin-inline: auto; }
+.cover img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 40px 120px -40px rgba(217, 175, 88, .35); }
+.cover figcaption { display: grid; justify-items: center; gap: 4px; margin-top: 20px; text-align: center; }
+.sample { margin: 0; }
+.sample img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; background: #fff; }
+.sample figcaption { margin-top: 12px; font: 500 .72rem/1.4 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+.compare { overflow-x: auto; }
+.compare table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: .95rem; }
+.compare th, .compare td { padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+.compare thead th { font: 600 1.05rem/1.3 var(--display); border-bottom-color: var(--line); }
+.compare tbody th { font-weight: 500; }
+.compare td { color: var(--ash); }
+
 /* Footer */
 .footer { border-top: 1px solid var(--line); background: var(--obsidian); padding-top: clamp(48px, 7vw, 80px); }
 .footer__grid { display: grid; grid-template-columns: 1.4fr 0.8fr 1.2fr; gap: clamp(28px, 5vw, 64px); }

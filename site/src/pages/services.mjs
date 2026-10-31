@@ -33,9 +33,10 @@ export default {
     </div>
     <div class="grid grid--2">
       <article class="card card--link" data-reveal><span class="num">01 · Guided sprint</span><h3>HIS OS Foundations</h3><p>The first practical doorway: build four connected personal systems across a guided 28-day sprint.</p><a class="link-arrow" href="/his-os-foundations">Explore Foundations →</a></article>
-      <article class="card card--link" data-reveal><span class="num">02 · Books</span><h3>Frameworks for deliberate living</h3><p>Durable ideas and reference material for stronger standards, cleaner decisions, and deliberate action.</p><a class="link-arrow" href="/high-value-living">Explore High Value Living →</a></article>
-      <article class="card card--link" data-reveal><span class="num">03 · Audio</span><h3>Functional audio tools</h3><p>Audio designed to support focus, reset, recovery, discipline, and calm intensity.</p><a class="link-arrow" href="/audio">Explore Audio →</a></article>
-      <article class="card card--link" data-reveal style="border-color:var(--line)"><span class="num">04 · Custom build</span><h3>Custom HIS OS Build</h3><p>A bespoke coaching and implementation path for people who need deeper diagnosis, design, and direct support. Engagements begin at $2,500 USD.</p><a class="link-arrow" href="/contact">Ask About a Custom Build →</a></article>
+      <article class="card card--link" data-reveal><span class="num">02 · Self-install</span><h3>DIY OS</h3><p>The Foundations method as a printable 34-page manual. Build the same four systems on your own schedule. $47 USD, credited toward Foundations if you upgrade.</p><a class="link-arrow" href="/diy-os">Explore DIY OS →</a></article>
+      <article class="card card--link" data-reveal><span class="num">03 · Books</span><h3>Frameworks for deliberate living</h3><p>Durable ideas and reference material for stronger standards, cleaner decisions, and deliberate action.</p><a class="link-arrow" href="/high-value-living">Explore High Value Living →</a></article>
+      <article class="card card--link" data-reveal><span class="num">04 · Audio</span><h3>Functional audio tools</h3><p>Audio designed to support focus, reset, recovery, discipline, and calm intensity.</p><a class="link-arrow" href="/audio">Explore Audio →</a></article>
+      <article class="card card--link" data-reveal style="border-color:var(--line);grid-column:1/-1"><span class="num">05 · Custom build</span><h3>Custom HIS OS Build</h3><p>A bespoke coaching and implementation path for people who need deeper diagnosis, design, and direct support. Engagements begin at $2,500 USD.</p><a class="link-arrow" href="/contact">Ask About a Custom Build →</a></article>
     </div>
   </div>
 </section>
