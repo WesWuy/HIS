@@ -28,6 +28,7 @@ const mark = (size = 40) =>
 export const ui = {
   site,
   mark,
+  esc,
   emailLink: (cls = "") =>
     `<a class="${cls}" href="mailto:${site.email}" data-track-event="email_click">${site.email}</a>`,
 
@@ -67,6 +68,8 @@ export function layout(page, body) {
         contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: site.email, url: `${site.url}/contact` },
       },
       { "@type": "WebPage", "@id": url, url, name: fullTitle, description: page.description, isPartOf: { "@type": "WebSite", name: site.name, url: site.url } },
+      // Optional page-specific nodes (Product, FAQPage, …).
+      ...(page.jsonLd || []),
     ],
   };
   const navLinks = (cls) =>
@@ -128,6 +131,7 @@ ${body}
     </div>
     <nav class="footer__nav" aria-label="Footer">
       ${nav.map(([h, l]) => `<a href="${h}">${l}</a>`).join("")}
+      <a href="/diy-os">DIY OS</a>
       <a href="/high-value-living">High Value Living</a>
       <a href="/audio">Audio</a>
     </nav>

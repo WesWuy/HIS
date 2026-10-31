@@ -12,8 +12,15 @@ Rebuilt 2026-10-31 from the live site, which had previously been uploaded by han
 ## Forms (Netlify Forms)
 Form `name`s must not change; Netlify stores submissions per name:
 `contact`, `waitlist-his-os-foundations`, `newsletter-home-hero`, `newsletter-home-final`, `newsletter-footer`,
-`newsletter-systems`, `newsletter-high-value-living`, `newsletter-audio`, `newsletter-contact`.
+`newsletter-systems`, `newsletter-high-value-living`, `newsletter-audio`, `newsletter-contact`,
+`newsletter-diy-os` (DIY OS notify-me list; shown only while no checkout link is set).
 Who gets emailed on each submission is set in Netlify → Forms → Form notifications.
+
+## DIY OS checkout
+`/diy-os` sells the DIY OS PDF through an external storefront. Set `DIY_OS_CHECKOUT_URL`
+(Netlify → Project configuration → Environment variables) to the storefront's checkout link and
+redeploy. The buy buttons then point there; while it's unset, the page shows the notify-me form.
+The PDF itself is the paid product and is **not** stored in this public repo.
 
 ## Email
 `hello@humanimprovementsystems.com` is hosted by Zoho Mail (MX records point to Zoho).
