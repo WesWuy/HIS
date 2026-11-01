@@ -3,12 +3,14 @@ export default {
   title: "Build Your Personal Operating System | Human Improvement Systems",
   description:
     "Human Improvement Systems helps people upgrade discipline, energy, clarity, and self-control through practical personal systems.",
+  scripts: ["/assets/hero.js"],
   body: (ui) => `
-<section class="hero">
+<section class="hero hero--live">
+  <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>
   <div class="wrap hero__grid">
     <div>
       ${ui.eyebrow("Human Improvement Systems")}
-      <h1>Build your personal operating system.</h1>
+      <h1>Build your personal <span class="hero__shine">operating system.</span></h1>
       <p class="lead">Upgrade discipline, energy, clarity, and self-control with systems for becoming stronger, clearer, and more useful.</p>
       ${ui.newsletter({ name: "newsletter-home-hero", source: "home-hero", page: "/", id: "home-newsletter" })}
       <div class="hero__pillars" aria-label="Core focus areas">
@@ -19,7 +21,7 @@ export default {
       </div>
     </div>
     <aside class="console" aria-label="HIS OS Foundations at a glance">
-      <div class="console__bar">${ui.mark(24)}<span>HIS OS · Foundations</span><span>28 days</span></div>
+      <div class="console__bar">${ui.mark(24)}<span>HIS OS · Foundations</span><span><i class="console__live" aria-hidden="true"></i>28 days</span></div>
       <ol class="console__rows">
         <li><small>Week 1</small><strong>Identity System</strong><p>Standards, rules, direction, decision filters.</p></li>
         <li><small>Week 2</small><strong>Energy System</strong><p>Inputs, minimum standards, environment, recovery.</p></li>

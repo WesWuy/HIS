@@ -112,6 +112,7 @@ export function layout(page, body) {
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/assets/site.js" defer></script>
+${(page.scripts || []).map((src) => `<script src="${src}" defer></script>`).join("\n")}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

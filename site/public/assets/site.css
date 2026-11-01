@@ -122,6 +122,31 @@ p { margin: 0 0 1em; }
 @media (max-width: 900px) { .hero__grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .hero__pillars { grid-template-columns: 1fr 1fr; } .hero__pillars div:nth-child(3) { border-left: 0; } .hero__pillars div:nth-child(n+3) { border-top: 1px solid var(--line); } }
 
+/* Live hero (home): canvas lattice replaces the static CSS grid, same mask. */
+.hero--live::after { content: none; }
+.hero__canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none;
+  mask-image: radial-gradient(75% 85% at 70% 40%, #000 25%, transparent 80%); -webkit-mask-image: radial-gradient(75% 85% at 70% 40%, #000 25%, transparent 80%); }
+.hero__shine { background: linear-gradient(100deg, var(--bone) 0%, var(--bone) 38%, var(--gold-hi) 48%, var(--gold) 52%, var(--bone) 62%, var(--bone) 100%);
+  background-size: 250% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: hero-shine 7s ease-in-out 0.6s infinite; }
+@keyframes hero-shine { 0% { background-position: 100% 0; } 35%, 100% { background-position: 0% 0; } }
+.hero--live .console { animation: console-breathe 6s ease-in-out infinite; }
+@keyframes console-breathe { 50% { box-shadow: 0 40px 140px -36px rgba(217, 175, 88, .5); } }
+.console__live { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--gold); vertical-align: 1px; animation: console-live 2s ease-in-out infinite; }
+@keyframes console-live { 0%, 100% { box-shadow: 0 0 0 0 rgba(217, 175, 88, .6); } 50% { box-shadow: 0 0 0 6px rgba(217, 175, 88, 0); } }
+/* One week at a time comes "online" in the console, in order, on a loop. */
+.hero--live .console__rows li { position: relative; animation: console-row 12s ease-in-out infinite; }
+.hero--live .console__rows li::before { content: ""; position: absolute; left: -18px; top: 12px; bottom: 12px; width: 2px; background: var(--gold); opacity: 0; animation: console-bar 12s ease-in-out infinite; animation-delay: inherit; }
+.hero--live .console__rows li:nth-child(2) { animation-delay: 3s; }
+.hero--live .console__rows li:nth-child(3) { animation-delay: 6s; }
+.hero--live .console__rows li:nth-child(4) { animation-delay: 9s; }
+@keyframes console-row { 0%, 30%, 100% { background-color: transparent; } 5%, 22% { background-color: rgba(217, 175, 88, .05); } }
+@keyframes console-bar { 0%, 30%, 100% { opacity: 0; } 5%, 22% { opacity: 1; box-shadow: 0 0 12px rgba(217, 175, 88, .8); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__shine, .hero--live .console, .console__live, .hero--live .console__rows li, .hero--live .console__rows li::before { animation: none; }
+  .hero__shine { background: none; color: var(--bone); }
+}
+
 /* OS console (hero visual) */
 .console { position: relative; border: 1px solid var(--line); border-radius: 6px; background: linear-gradient(180deg, rgba(21, 20, 18, .92), rgba(5, 5, 5, .96)); box-shadow: 0 40px 120px -40px rgba(217, 175, 88, .35); }
 .console__bar { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line-soft); font: 500 .72rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ash); }
