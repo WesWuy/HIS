@@ -122,8 +122,16 @@ p { margin: 0 0 1em; }
 @media (max-width: 900px) { .hero__grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .hero__pillars { grid-template-columns: 1fr 1fr; } .hero__pillars div:nth-child(3) { border-left: 0; } .hero__pillars div:nth-child(n+3) { border-top: 1px solid var(--line); } }
 
-/* Live hero (home): canvas lattice replaces the static CSS grid, same mask. */
+/* Live hero (home): canvas lattice replaces the static CSS grid, same mask.
+   Background photo (ComfyUI/SDXL "ascent") fades to carbon on the left and bottom so the copy stays legible. */
 .hero--live::after { content: none; }
+.hero--live::before { background:
+  linear-gradient(90deg, var(--carbon) 0%, rgba(5, 5, 5, .9) 38%, rgba(5, 5, 5, .5) 70%, rgba(5, 5, 5, .3) 100%),
+  linear-gradient(0deg, var(--carbon) 0%, transparent 25%),
+  url(/assets/img/hero-bg-ascent-1344.webp) right center / cover no-repeat; }
+@media (max-width: 900px) { .hero--live::before { background:
+  linear-gradient(180deg, rgba(5, 5, 5, .7) 0%, rgba(5, 5, 5, .9) 35%, var(--carbon) 100%),
+  url(/assets/img/hero-bg-ascent-768.webp) center top / cover no-repeat; } }
 .hero__canvas { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none;
   mask-image: radial-gradient(75% 85% at 70% 40%, #000 25%, transparent 80%); -webkit-mask-image: radial-gradient(75% 85% at 70% 40%, #000 25%, transparent 80%); }
 .hero__shine { background: linear-gradient(100deg, var(--bone) 0%, var(--bone) 38%, var(--gold-hi) 48%, var(--gold) 52%, var(--bone) 62%, var(--bone) 100%);
