@@ -1,6 +1,6 @@
 export default {
   path: "/his-os-foundations",
-  title: "HIS OS Foundations: Build Your Personal Operating System in 28 Days",
+  title: "HIS OS Foundations: 28-Day Sprint",
   description:
     "Join the HIS OS Foundations founding-cohort list. Build practical systems for identity, energy, focus, discipline, and execution in a guided 28-day sprint.",
   body: (ui) => `

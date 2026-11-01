@@ -10,9 +10,9 @@ const layers = [
 
 export default {
   path: "/systems",
-  title: "The HIS Framework: Seven Personal Operating Systems",
+  title: "The HIS Framework: 7 Systems",
   description:
-    "The Human Improvement Systems framework organizes personal development into seven systems you can observe, repair, and improve: discipline, energy, focus, identity, environment, relationships, and mission.",
+    "Seven personal operating systems you can observe, repair, and improve: discipline, energy, focus, identity, environment, relationships, and mission.",
   body: (ui) => `
 <section class="hero hero--page">
   <div class="wrap">
