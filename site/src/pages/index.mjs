@@ -4,6 +4,12 @@ export default {
   description:
     "Human Improvement Systems helps people upgrade discipline, energy, clarity, and self-control through practical personal systems.",
   scripts: ["/assets/hero.js"],
+  // Hero background is a CSS image (the LCP element); preload it so it isn't discovered only after site.css.
+  // Breakpoint matches the .hero--live::before media query in site.css.
+  preloadImages: [
+    { href: "/assets/img/hero-bg-ascent-1344.webp", media: "(min-width: 901px)" },
+    { href: "/assets/img/hero-bg-ascent-768.webp", media: "(max-width: 900px)" },
+  ],
   body: (ui) => `
 <section class="hero hero--live">
   <canvas class="hero__canvas" data-hero-canvas aria-hidden="true"></canvas>

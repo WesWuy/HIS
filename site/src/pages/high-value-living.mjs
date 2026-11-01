@@ -17,7 +17,7 @@ export default {
   path: "/high-value-living",
   title: "High Value Living Book",
   description:
-    "High Value Living is the book and entry point into Human Improvement Systems, built for people who want stronger standards, discipline, clarity, and self-respect.",
+    "High Value Living is the entry point into Human Improvement Systems: a book for people who want stronger standards, discipline, clarity, and self-respect.",
   ogImage: "/assets/his/marketing/01_brand_announcement_square.png",
   body: (ui) => `
 <section class="hero hero--page">

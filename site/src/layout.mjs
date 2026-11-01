@@ -109,6 +109,7 @@ export function layout(page, body) {
 <meta name="twitter:image" content="${og}">
 <link rel="preload" href="/assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+${(page.preloadImages || []).map(({ href, media }) => `<link rel="preload" href="${href}" as="image" type="image/webp"${media ? ` media="${media}"` : ""} fetchpriority="high">`).join("\n")}
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/assets/site.js" defer></script>

@@ -40,8 +40,8 @@ const site = "https://humanimprovementsystems.com";
 
 export default {
   path: "/diy-os",
-  title: "DIY OS: Build Your Personal Operating System on Your Own",
-  description: `DIY OS is the self-install edition of HIS OS Foundations: a printable ${pages}-page manual for building your identity, energy, focus, and execution systems in 28 days, on your own schedule.`,
+  title: "DIY OS: Self-Install Manual",
+  description: `DIY OS is the self-install edition of HIS OS Foundations: a printable ${pages}-page manual to build your identity, energy, focus, and execution systems in 28 days.`,
   jsonLd: [
     {
       "@type": "Product",

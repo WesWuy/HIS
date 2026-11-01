@@ -11,7 +11,7 @@ export default {
   path: "/contact",
   title: "Contact Human Improvement Systems",
   description:
-    "Contact Human Improvement Systems by email at hello@humanimprovementsystems.com or the contact form: HIS OS Foundations, books, audio, speaking, custom system builds, or general inquiries.",
+    "Email hello@humanimprovementsystems.com or use the contact form for HIS OS Foundations, books, audio, speaking, or custom system builds.",
   ogImage: "/assets/his/marketing/04_social_post_white.png",
   body: (ui) => `
 <section class="hero hero--page">
