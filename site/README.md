@@ -24,6 +24,23 @@ and the home page labels DIY OS "Coming soon". Price and checkout URL live in `s
 (`src/layout.mjs`).
 The PDF itself is the paid product and is **not** stored in this public repo.
 
+## Analytics
+Cloudflare Web Analytics (cookieless, no consent banner needed). In Cloudflare → Analytics & Logs →
+Web Analytics, add `humanimprovementsystems.com` and copy the site token (DNS is grey-cloud, so use the
+JS snippet option, not automatic setup). Set `CF_WEB_ANALYTICS_TOKEN` in Netlify → Environment variables
+and redeploy. The beacon then loads on every page, the CSP in `netlify.toml` already allows it, and
+`/privacy` switches its analytics wording on. The `data-track-event` click hooks in `site.js` only
+forward to gtag/Meta/TikTok if one of those is ever installed.
+
+## Privacy policy
+`/privacy` (`src/pages/privacy.mjs`) describes what the forms collect and who processes it
+(Netlify, Zoho, Cloudflare, the DIY OS checkout provider). Update it whenever a form field,
+processor, or tracking tool changes.
+
+## Waitlist consent
+The Foundations waitlist has an optional `consent` checkbox (`value="yes"`; absent when unticked).
+Zoho Flow "HIS Waitlist to CRM Lead" branches on `data.consent equals "yes"` to set `Consent_to_Email`.
+
 ## Email
 `hello@humanimprovementsystems.com` is hosted by Zoho Mail (MX records point to Zoho).
 Forwarding to Gmail, if wanted, is set in Zoho Mail → Settings → Mail Forwarding.

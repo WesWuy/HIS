@@ -129,7 +129,10 @@ export default {
       <div class="field"><label for="wl-name">Name</label><input id="wl-name" type="text" name="name" autocomplete="name" placeholder="Your name"></div>
       <div class="field"><label for="wl-email">Email</label><input id="wl-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"></div>
       <div class="field"><label for="wl-challenge">What part of your personal operating system needs the most work? <span>(optional)</span></label><textarea id="wl-challenge" name="challenge"></textarea></div>
+      <!-- Zoho Flow "HIS Waitlist to CRM Lead" branches on data.consent == "yes"; unchecked sends nothing (= no consent). -->
+      <label class="check" for="wl-consent"><input id="wl-consent" type="checkbox" name="consent" value="yes"> <span>Also send me Field Notes and HIS updates by email. Unsubscribe any time.</span></label>
       <button type="submit" class="btn btn--gold">Join the Founding Cohort List</button>
+      <p class="form-note">We'll email you about the cohort opening either way. See the <a href="/privacy">privacy policy</a>.</p>
     </form>
   </div>
 </section>

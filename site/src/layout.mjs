@@ -14,6 +14,12 @@ export const site = {
     checkoutUrl: (process.env.DIY_OS_CHECKOUT_URL || "").trim(),
     price: 47,
   },
+  // Cloudflare Web Analytics (cookieless). Set CF_WEB_ANALYTICS_TOKEN in Netlify → Environment variables
+  // (Cloudflare → Analytics & Logs → Web Analytics → add site → copy the token) and redeploy.
+  // The CSP in netlify.toml already allows its script and beacon hosts. /privacy mentions it only when on.
+  analytics: {
+    cfToken: (process.env.CF_WEB_ANALYTICS_TOKEN || "").trim(),
+  },
 };
 
 const nav = [
@@ -114,6 +120,7 @@ ${(page.preloadImages || []).map(({ href, media }) => `<link rel="preload" href=
 <script type="application/ld+json">${JSON.stringify(ld)}</script>
 <script src="/assets/site.js" defer></script>
 ${(page.scripts || []).map((src) => `<script src="${src}" defer></script>`).join("\n")}
+${site.analytics.cfToken ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${esc(JSON.stringify({ token: site.analytics.cfToken }))}'></script>` : ""}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -151,7 +158,7 @@ ${body}
   </div>
   <div class="wrap footer__legal">
     <p>© ${new Date().getFullYear()} ${site.name}. All rights reserved.</p>
-    <p><a href="/contact">Contact</a> · <a href="mailto:${site.email}">${site.email}</a></p>
+    <p><a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="mailto:${site.email}">${site.email}</a></p>
   </div>
 </footer>
 </body>

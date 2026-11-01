@@ -187,6 +187,16 @@ select { appearance: none; background-image: linear-gradient(45deg, transparent 
 .field label span { font-weight: 400; color: var(--ash); }
 .form-card { display: grid; gap: 18px; padding: clamp(20px, 4vw, 36px); border: 1px solid var(--line); border-radius: 6px; background: var(--graphite); }
 .form-note { font-size: .85rem; color: var(--ash); margin: 0; }
+.form-note a { color: inherit; }
+.check { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; color: var(--ash); cursor: pointer; }
+.check input { flex: none; width: 18px; height: 18px; min-height: 0; padding: 0; margin: 2px 0 0; accent-color: var(--gold); }
+/* Long-form text pages (privacy). */
+.prose { max-width: 760px; }
+.prose h2 { margin-top: 2.2em; }
+.prose p, .prose li { color: var(--ash); }
+.prose strong { color: var(--bone); }
+.prose ul { padding-left: 1.2em; }
+.prose li { margin-bottom: .5em; }
 @media (max-width: 520px) { .signup:not(.signup--compact) { flex-direction: column; } }
 
 /* Cards & grids */
