@@ -19,7 +19,9 @@ Who gets emailed on each submission is set in Netlify → Forms → Form notific
 ## DIY OS checkout
 `/diy-os` sells the DIY OS PDF through an external storefront. Set `DIY_OS_CHECKOUT_URL`
 (Netlify → Project configuration → Environment variables) to the storefront's checkout link and
-redeploy. The buy buttons then point there; while it's unset, the page shows the notify-me form.
+redeploy. The buy buttons then point there; while it's unset, `/diy-os` shows the notify-me form
+and the home page labels DIY OS "Coming soon". Price and checkout URL live in `site.diyOs`
+(`src/layout.mjs`).
 The PDF itself is the paid product and is **not** stored in this public repo.
 
 ## Email
@@ -27,6 +29,5 @@ The PDF itself is the paid product and is **not** stored in this public repo.
 Forwarding to Gmail, if wanted, is set in Zoho Mail → Settings → Mail Forwarding.
 
 ## Deploying
-Until Netlify is linked to this GitHub repo, deploy from this folder with the Netlify CLI
-(or the Netlify MCP `deploy-site` command). Once linked (Project configuration → Build & deploy →
-Link repository; base directory `site`), every push to `main` deploys automatically.
+Netlify is linked to this GitHub repo (base directory `site`). Every merge to `main` deploys to
+production automatically, and every pull request gets a deploy preview.

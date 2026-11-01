@@ -1,9 +1,9 @@
 // DIY OS: the self-install PDF edition of HIS OS Foundations.
-// Checkout is hosted by the storefront (Lemon Squeezy / Gumroad / Stripe Payment Link).
-// Set DIY_OS_CHECKOUT_URL in Netlify → Environment variables and redeploy to switch the
-// page from the notify-me form to the buy button.
-const checkoutUrl = (process.env.DIY_OS_CHECKOUT_URL || "").trim();
-const price = 47;
+// Checkout URL and price live in `site.diyOs` (layout.mjs); while the URL is unset the page
+// shows the notify-me form instead of the buy button.
+import { site as siteConfig } from "../layout.mjs";
+
+const { checkoutUrl, price } = siteConfig.diyOs;
 const pages = 34;
 const worksheets = 15;
 

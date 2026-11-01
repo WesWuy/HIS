@@ -8,11 +8,18 @@ export const site = {
   summary:
     "Human Improvement Systems helps people turn intention into architecture through discipline, energy, clarity, self-control, and practical personal systems.",
   defaultOg: "/assets/his/marketing/02_website_hero_banner.png",
+  // DIY OS checkout is hosted by the storefront. Set DIY_OS_CHECKOUT_URL in Netlify →
+  // Environment variables and redeploy; until then every DIY OS CTA points at the notify-me list.
+  diyOs: {
+    checkoutUrl: (process.env.DIY_OS_CHECKOUT_URL || "").trim(),
+    price: 47,
+  },
 };
 
 const nav = [
   ["/", "Home"],
   ["/his-os-foundations", "Foundations"],
+  ["/diy-os", "DIY OS"],
   ["/systems", "Systems"],
   ["/services", "Services"],
   ["/about", "About"],
@@ -131,7 +138,6 @@ ${body}
     </div>
     <nav class="footer__nav" aria-label="Footer">
       ${nav.map(([h, l]) => `<a href="${h}">${l}</a>`).join("")}
-      <a href="/diy-os">DIY OS</a>
       <a href="/high-value-living">High Value Living</a>
       <a href="/audio">Audio</a>
     </nav>

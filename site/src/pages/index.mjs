@@ -72,6 +72,29 @@ export default {
   </div>
 </section>
 
+<section class="section section--obsidian" id="diy-os">
+  <div class="wrap split">
+    <figure class="cover" style="margin:0" data-reveal>
+      <a href="/diy-os" data-track-event="home_diy_os_click"><img src="/assets/img/diy-os-cover-440.webp" srcset="/assets/img/diy-os-cover-440.webp 440w, /assets/img/diy-os-cover-880.webp 880w" sizes="(max-width: 860px) 80vw, 400px" width="440" height="570" loading="lazy" alt="Cover of DIY OS, The HIS Self-Install Manual."></a>
+    </figure>
+    <div data-reveal>
+      ${ui.eyebrow(ui.site.diyOs.checkoutUrl ? "New · Self-install edition" : "Coming soon · Self-install edition")}
+      <h2>DIY OS: build it on your own schedule.</h2>
+      <p class="lead">The Foundations method as a printable 34-page manual. The same four systems, 15 worksheets, and a 28-day install. No calls and no cohort: you build it on your own time.</p>
+      <ul class="checks">
+        <li>Identity, energy, focus, and execution systems</li>
+        <li>One-page OS Blueprint and 28-day scorecard</li>
+        <li>About 90 minutes a week plus 5 minutes a day</li>
+      </ul>
+      <div class="actions">
+        <a class="btn btn--gold" href="/diy-os#get-diy-os" data-track-event="home_diy_os_click">${ui.site.diyOs.checkoutUrl ? `Get DIY OS · $${ui.site.diyOs.price}` : "Get Notified at Launch"}</a>
+        <a class="btn btn--outline" href="/diy-os#inside">Look Inside</a>
+      </div>
+      <p class="form-note" style="margin-top:16px">$${ui.site.diyOs.price} USD, one-time · instant PDF download${ui.site.diyOs.checkoutUrl ? "" : " when checkout opens"}</p>
+    </div>
+  </div>
+</section>
+
 <section class="section section--bone">
   <div class="wrap split">
     <div class="titlecard" data-reveal aria-hidden="true">
@@ -96,11 +119,11 @@ export default {
     <div class="section-head" data-reveal>
       ${ui.eyebrow("Ecosystem")}
       <h2>One operating system. Several ways to build it.</h2>
-      <p class="lead">Start with HIS OS Foundations, then use books, audio, templates, or custom support as your work deepens.</p>
+      <p class="lead">Start with HIS OS Foundations or DIY OS, then use books, audio, or custom support as your work deepens.</p>
     </div>
     <div class="grid grid--3">
       <a class="card card--link" href="/his-os-foundations" data-reveal style="text-decoration:none"><span class="num">01</span><h3>HIS OS Foundations cohort</h3><p>The guided 28-day sprint. The first practical doorway.</p><span class="link-arrow">Explore →</span></a>
-      <a class="card card--link" href="/systems" data-reveal style="text-decoration:none"><span class="num">02</span><h3>Digital systems and templates</h3><p>The framework, worksheets, and system templates.</p><span class="link-arrow">See the framework →</span></a>
+      <a class="card card--link" href="/diy-os" data-reveal style="text-decoration:none"><span class="num">02</span><h3>DIY OS self-install manual</h3><p>The Foundations method as a printable manual, built on your own schedule.</p><span class="link-arrow">Explore DIY OS →</span></a>
       <a class="card card--link" href="/audio" data-reveal style="text-decoration:none"><span class="num">03</span><h3>Audio programs and training music</h3><p>Sound for focus, reset, recovery, and movement.</p><span class="link-arrow">Explore audio →</span></a>
       <a class="card card--link" href="/high-value-living" data-reveal style="text-decoration:none"><span class="num">04</span><h3>Workbooks and field guides</h3><p>Starting with High Value Living.</p><span class="link-arrow">Explore the book →</span></a>
       <a class="card card--link" href="/services" data-reveal style="text-decoration:none"><span class="num">05</span><h3>Custom HIS OS builds</h3><p>Deeper diagnosis, design, and direct support.</p><span class="link-arrow">See services →</span></a>
