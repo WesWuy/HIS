@@ -34,6 +34,7 @@ export default {
         .map(([t, d], i) => `<article class="card" data-reveal><span class="num">${String(i + 1).padStart(2, "0")}</span><h3>${t}</h3><p>${d}</p></article>`)
         .join("")}
       <a class="card card--link" href="/his-os-foundations" data-reveal style="text-decoration:none;border-color:var(--line)"><span class="num">Start</span><h3>Build four of them in 28 days</h3><p>HIS OS Foundations installs identity, energy, focus, and execution as one working rhythm.</p><span class="link-arrow">Explore Foundations →</span></a>
+      <a class="card card--link" href="/diy-os" data-reveal style="text-decoration:none;border-color:var(--line)"><span class="num">Self-install</span><h3>Build them on your own</h3><p>DIY OS puts the same four systems in a printable manual you work through on your own schedule.</p><span class="link-arrow">Explore DIY OS →</span></a>
     </div>
   </div>
 </section>
